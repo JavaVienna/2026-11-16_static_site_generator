@@ -1,0 +1,2 @@
+/* Minimal supplemental styles; Tailwind CDN provides the rest. */
+html { scroll-behavior: smooth; }

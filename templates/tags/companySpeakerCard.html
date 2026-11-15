@@ -1,0 +1,19 @@
+<div class="border border-slate-200 rounded-lg p-4 hover:shadow-md transition">
+  <div class="flex items-start justify-between gap-3">
+    <div>
+      <a href="{site.url(s.url)}" class="font-semibold text-slate-900 hover:underline">{s.name}</a>
+      {#if s.jobTitle}<span class="text-sm text-slate-600"> &ndash; {s.jobTitle}</span>{/if}
+      {#if s.dateRange}<p class="text-xs text-slate-400 mt-0.5">{s.dateRange}</p>{/if}
+    </div>
+    {#if s.talkCount > 0}<span class="text-sm text-slate-400 whitespace-nowrap shrink-0">{s.talkCount} talk{#if s.talkCount != 1}s{/if}</span>{/if}
+  </div>
+  {#if s.hasBio}
+    <p class="text-sm text-slate-500 mt-2 line-clamp-2">{s.bio}</p>
+  {/if}
+  {#if s.linkedinUrl || s.githubUrl}
+    <div class="flex gap-4 mt-2 text-xs">
+      {#if s.linkedinUrl}<a href="{s.linkedinUrl}" target="_blank" rel="noopener" class="text-blue-600 hover:underline">LinkedIn</a>{/if}
+      {#if s.githubUrl}<a href="{s.githubUrl}" target="_blank" rel="noopener" class="text-blue-600 hover:underline">GitHub</a>{/if}
+    </div>
+  {/if}
+</div>

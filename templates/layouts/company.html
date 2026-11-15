@@ -1,0 +1,54 @@
+---
+layout: main
+---
+{@io.quarkiverse.roq.frontmatter.runtime.model.Page page}
+{@io.quarkiverse.roq.frontmatter.runtime.model.Site site}
+
+<a href="{site.url('/companies/')}" class="text-sm text-blue-600 hover:underline">&larr; Back to Companies</a>
+
+<div class="mt-6 flex flex-col items-center text-center">
+  {#if page.data.hasLogo}
+    <img src="{#if page.data.logo.startsWith('/')}{site.url(page.data.logo)}{#else}{page.data.logo}{/if}"
+         alt="{page.data.name}" class="max-h-28 max-w-sm object-contain mb-4">
+  {/if}
+  <h1 class="text-3xl font-bold text-slate-900">{page.data.name}</h1>
+  <div class="flex items-center gap-3 mt-2">
+    {#if page.data.isCurrentSponsor}
+      <span class="text-xs font-medium text-green-700 bg-green-100 rounded px-2 py-0.5">Active Sponsor</span>
+    {#else if page.data.wasSponsor}
+      <span class="text-xs font-medium text-slate-600 bg-slate-100 rounded px-2 py-0.5">Past Sponsor</span>
+    {/if}
+    {#if page.data.totalTalks > 0}
+      <span class="text-sm text-slate-500">{page.data.totalTalks} Total Talks</span>
+    {/if}
+  </div>
+  {#if page.data.websiteUrl}
+    <a href="{page.data.websiteUrl}" target="_blank" rel="noopener" class="text-sm text-blue-600 hover:underline mt-2">Visit website</a>
+  {/if}
+</div>
+
+{#if page.data.hasDescription}
+  <article class="max-w-2xl mx-auto mt-8 whitespace-pre-line leading-relaxed text-slate-700">{#insert /}</article>
+{/if}
+
+{#if !page.data.currentSpeakers.isEmpty}
+  <div class="max-w-2xl mx-auto mt-10">
+    <h2 class="text-xl font-bold text-slate-800 mb-4">Current Speakers</h2>
+    <div class="space-y-3">
+      {#for s in page.data.currentSpeakers}
+        {#companySpeakerCard s=s site=site /}
+      {/for}
+    </div>
+  </div>
+{/if}
+
+{#if !page.data.pastSpeakers.isEmpty}
+  <div class="max-w-2xl mx-auto mt-10">
+    <h2 class="text-xl font-bold text-slate-800 mb-4">Past Speakers</h2>
+    <div class="space-y-3">
+      {#for s in page.data.pastSpeakers}
+        {#companySpeakerCard s=s site=site /}
+      {/for}
+    </div>
+  </div>
+{/if}

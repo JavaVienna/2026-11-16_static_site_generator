@@ -1,0 +1,22 @@
+{
+  "recentPast" : [ {
+    "title" : "\"Debugging Class Loading with GDB\" + \"Be a better SW-Eng with AI\"",
+    "dateDisplay" : "Sep 21, 2026 at 18:00",
+    "url" : "/events/debugging-class-loading-with-gdb-be-a-better-sw-eng-with-ai-92/",
+    "talkCount" : 0,
+    "hasTalks" : false
+  }, {
+    "title" : "\"living immutable: painless Java Records\" + \"Zero-Deps Java AI Business Agents\"",
+    "dateDisplay" : "Jun 29, 2026 at 18:00",
+    "url" : "/events/living-immutable-painless-java-records-zero-deps-java-ai-bus-94/",
+    "talkCount" : 0,
+    "hasTalks" : false
+  }, {
+    "title" : "\"Unbreakable by design\" + \"Heaps of Trouble\"",
+    "dateDisplay" : "Jun 15, 2026 at 18:00",
+    "url" : "/events/unbreakable-by-design-heaps-of-trouble-93/",
+    "talkCount" : 0,
+    "hasTalks" : false
+  } ],
+  "nextUpcoming" : null
+}

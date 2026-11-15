@@ -1,0 +1,62 @@
+---
+layout: main
+---
+{@io.quarkiverse.roq.frontmatter.runtime.model.Page page}
+{@io.quarkiverse.roq.frontmatter.runtime.model.Site site}
+
+<a href="{site.url('/speakers/')}" class="text-sm text-blue-600 hover:underline">&larr; Back to Speakers</a>
+
+<div class="mt-6 flex flex-col items-center text-center">
+  {#if page.data.photo}
+    <img src="{#if page.data.photo.startsWith('/')}{site.url(page.data.photo)}{#else}{page.data.photo}{/if}"
+         alt="{page.data.name}" class="w-40 h-40 rounded-full object-cover mb-4">
+  {#else}
+    <div class="w-40 h-40 rounded-full bg-slate-200 flex items-center justify-center text-4xl text-slate-500 font-semibold mb-4">
+      {page.data.name.charAt(0)}
+    </div>
+  {/if}
+  <h1 class="text-3xl font-bold text-slate-900">{page.data.name}</h1>
+  {#if page.data.jobTitle || page.data.company}
+    <p class="text-blue-600 mt-1">
+      {#if page.data.jobTitle}{page.data.jobTitle}{/if}{#if page.data.jobTitle && page.data.company} at {/if}{#if page.data.company}{page.data.company}{/if}
+    </p>
+  {/if}
+
+  <div class="flex gap-4 mt-4 text-sm">
+    {#if page.data.linkedinUrl}<a href="{page.data.linkedinUrl}" target="_blank" rel="noopener" class="text-blue-600 hover:underline">LinkedIn</a>{/if}
+    {#if page.data.twitter}<a href="https://twitter.com/{page.data.twitter}" target="_blank" rel="noopener" class="text-blue-600 hover:underline">Twitter</a>{/if}
+    {#if page.data.github}<a href="https://github.com/{page.data.github}" target="_blank" rel="noopener" class="text-blue-600 hover:underline">GitHub</a>{/if}
+    {#if page.data.website}<a href="{page.data.website}" target="_blank" rel="noopener" class="text-blue-600 hover:underline">Website</a>{/if}
+  </div>
+</div>
+
+{#if page.data.hasBio}
+  <article class="max-w-2xl mx-auto mt-8 whitespace-pre-line leading-relaxed text-slate-700">{#insert /}</article>
+{/if}
+
+{#if !page.data.talks.isEmpty}
+  <div class="max-w-2xl mx-auto mt-10">
+    <h2 class="text-xl font-bold text-slate-800 mb-4">Talks at Java Vienna</h2>
+    <div class="space-y-4">
+      {#for talk in page.data.talks}
+        <a href="{site.url('/events/')}{talk.eventSlug}/" class="block border border-slate-200 rounded-lg p-5 hover:shadow-md transition">
+          <h3 class="font-semibold text-slate-900">{talk.title}</h3>
+          <p class="text-sm text-slate-500 mt-1">
+            {talk.eventTitle} &middot; {talk.dateDisplay}{#if talk.durationMinutes} &middot; {talk.durationMinutes} min{/if}
+          </p>
+        </a>
+      {/for}
+    </div>
+  </div>
+{/if}
+
+{#if !page.data.career.isEmpty}
+  <div class="max-w-2xl mx-auto mt-10">
+    <h2 class="text-xl font-bold text-slate-800 mb-4">Career</h2>
+    <ul class="space-y-2 text-sm text-slate-600">
+      {#for c in page.data.career}
+        <li>{c.jobTitle}{#if c.jobTitle && c.company} at {/if}{c.company}{#if c.period} <span class="text-slate-400">({c.period})</span>{/if}</li>
+      {/for}
+    </ul>
+  </div>
+{/if}

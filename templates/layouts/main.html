@@ -1,0 +1,67 @@
+---
+---
+{@io.quarkiverse.roq.frontmatter.runtime.model.Page page}
+{@io.quarkiverse.roq.frontmatter.runtime.model.Site site}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{#if page.title}{page.title} | {/if}{site.title}</title>
+  <meta name="description" content="{#if page.description}{page.description}{#else}{site.description}{/if}">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="{site.url('/css/site.css')}">
+</head>
+<body class="bg-white text-slate-800 antialiased">
+<div class="flex min-h-screen">
+  <!-- Sidebar -->
+  <aside class="w-64 shrink-0 border-r border-slate-200 bg-slate-50 hidden md:flex md:flex-col">
+    <div class="px-6 py-5 border-b border-slate-200">
+      <a href="{site.url('/')}" class="text-lg font-semibold text-slate-900">Java Vienna Portal</a>
+    </div>
+    <nav class="flex-1 px-3 py-4 space-y-1 text-sm">
+      {#navItem href="/" label="Welcome" icon="&#8962;" site=site /}
+      {#navItem href="/speakers/" label="Speakers" icon="&#128101;" site=site /}
+      {#navItem href="/companies/" label="Companies" icon="&#127970;" site=site /}
+      {#navItem href="/sponsors/" label="Sponsors" icon="&#127942;" site=site /}
+      {#navItem href="/events/" label="Events" icon="&#128197;" site=site /}
+      <a href="https://www.meetup.com/java-Vienna/" target="_blank" rel="noopener"
+         class="flex items-center gap-3 px-3 py-2 rounded-md text-slate-600 hover:bg-slate-100">
+        <span class="inline-block w-5 text-center text-slate-400">&#9883;</span>
+        <span>Meetup.com</span>
+      </a>
+      {#navItem href="/impressum/" label="Impressum" icon="&#9432;" site=site /}
+      {#navItem href="/privacy-policy/" label="Privacy Policy" icon="&#128737;" site=site /}
+    </nav>
+    <div class="px-6 py-4 text-xs text-slate-400 border-t border-slate-200">
+      &copy; Java Student User Group Vienna
+    </div>
+  </aside>
+
+  <!-- Main -->
+  <div class="flex-1 flex flex-col min-w-0">
+    <header class="h-14 flex items-center gap-3 border-b border-slate-200 px-6">
+      <span class="md:hidden text-slate-500">&#9776;</span>
+      <span class="text-slate-700 font-medium">{#if page.title}{page.title}{#else}{site.title}{/if}</span>
+    </header>
+    <main class="flex-1 px-6 py-8 max-w-4xl w-full">
+      {#insert /}
+    </main>
+  </div>
+
+  <!-- Sponsors column -->
+  <aside class="w-60 shrink-0 border-l border-slate-200 px-5 py-8 hidden lg:block">
+    <h2 class="text-base font-bold text-slate-900 mb-4">Our Sponsors</h2>
+    <div class="space-y-4">
+      {#for sp in cdi:sponsors.list}
+        <a href="{site.url('/companies/')}{sp.slug}/" class="block border border-slate-200 rounded-lg p-2 flex flex-col items-center hover:shadow-md transition">
+          {#if sp.logo}<img src="{#if sp.logo.startsWith('/')}{site.url(sp.logo)}{#else}{sp.logo}{/if}" alt="{sp.companyName}" class="h-20 w-full object-contain mb-2">{/if}
+          <span class="text-sm font-medium text-slate-800">{sp.companyName}</span>
+          <span class="text-xs text-slate-500">{sp.level}</span>
+        </a>
+      {/for}
+    </div>
+  </aside>
+</div>
+</body>
+</html>
