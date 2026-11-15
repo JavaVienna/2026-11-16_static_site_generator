@@ -1,0 +1,35 @@
+---
+title: Java Vienna
+description: Java Vienna - the monthly Java/JVM meetup in Vienna, Austria.
+layout: main
+---
+{@io.quarkiverse.roq.frontmatter.runtime.model.Site site}
+
+<div class="mb-8">
+  <img src="{site.url('/img/java-vienna-logo.png')}" alt="public static final Meetup JAVA_VIENNA = new Meetup(&quot;Java&quot;, &quot;Vienna&quot;, &quot;Beer&quot;, &quot;Fun&quot;); // visit https://www.java.wien/" class="max-w-xl w-full">
+</div>
+
+<h1 class="text-3xl font-bold text-slate-900 mb-4">Welcome to Java Vienna</h1>
+<p class="text-slate-600 mb-10 max-w-2xl">
+  Java Vienna is Austria's premier Java User Group, bringing together Java enthusiasts,
+  developers, and experts for regular meetups, talks, and networking. Join us to learn
+  about the latest Java technologies, share experiences, and connect with the community.
+</p>
+
+{#if cdi:home.nextUpcoming}
+<h2 class="text-xl font-bold text-slate-800 mb-4">Next Upcoming Event</h2>
+<a href="{site.url(cdi:home.nextUpcoming.url)}" class="block border border-sky-200 bg-sky-50 rounded-lg p-5 mb-10 hover:shadow-md transition">
+  <h3 class="font-semibold text-slate-900">{cdi:home.nextUpcoming.title}</h3>
+  <p class="text-sm text-slate-500 mt-1">{cdi:home.nextUpcoming.dateDisplay}</p>
+</a>
+{/if}
+
+<h2 class="text-xl font-bold text-slate-800 mb-4">Recent Past Events</h2>
+<div class="space-y-4 mb-12">
+  {#for ev in cdi:home.recentPast}
+    <a href="{site.url(ev.url)}" class="block border border-slate-200 rounded-lg p-5 hover:shadow-md transition">
+      <h3 class="font-semibold text-slate-900">{ev.title}</h3>
+      <p class="text-sm text-slate-500 mt-1">{ev.dateDisplay}</p>
+    </a>
+  {/for}
+</div>

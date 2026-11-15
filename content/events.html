@@ -1,0 +1,29 @@
+---
+title: Events
+layout: main
+---
+{@io.quarkiverse.roq.frontmatter.runtime.model.Site site}
+
+<h1 class="text-3xl font-bold text-slate-900 mb-8">Events</h1>
+
+{#for group in cdi:eventsByYear.list}
+  <h2 class="text-xl font-bold text-slate-800 mt-10 mb-5">{group.year}</h2>
+  <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+    {#for ev in group.events}
+      <a href="{site.url(ev.url)}" class="block border border-slate-200 rounded-lg overflow-hidden hover:shadow-md transition bg-white">
+        <div class="h-40 bg-sky-100 flex items-center justify-center">
+          <span class="text-2xl font-bold text-sky-700">JUG Vienna</span>
+        </div>
+        <div class="p-5">
+          <h3 class="font-semibold text-slate-900 leading-snug mb-2">{ev.title}</h3>
+          <p class="text-sm text-slate-500 mb-3">{ev.dateDisplay}</p>
+          {#if ev.hasTalks}
+            <p class="text-sm text-slate-600">{ev.talkCount} talk{#if ev.talkCount != 1}s{/if}</p>
+          {#else}
+            <p class="text-sm italic text-slate-400">No talks scheduled yet</p>
+          {/if}
+        </div>
+      </a>
+    {/for}
+  </div>
+{/for}

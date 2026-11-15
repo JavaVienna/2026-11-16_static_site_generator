@@ -1,0 +1,24 @@
+---
+title: Sponsors
+layout: main
+---
+{@io.quarkiverse.roq.frontmatter.runtime.model.Site site}
+
+<h1 class="text-4xl font-bold text-slate-900 mb-6">Our Sponsors</h1>
+<p class="text-slate-600 max-w-2xl mb-10">
+  We are grateful for the support of our sponsors who help make Java Vienna possible.
+  Their contributions enable us to provide quality events, venues, and resources for our community.
+</p>
+
+<div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+  {#for sp in cdi:sponsors.list}
+    <a href="{site.url('/companies/')}{sp.slug}/" class="block border border-slate-200 rounded-lg p-8 flex flex-col items-center text-center hover:shadow-md transition">
+      {#if sp.logo}
+        <img src="{#if sp.hasLocalLogo}{site.url(sp.logo)}{#else}{sp.logo}{/if}"
+             alt="{sp.companyName}" class="h-24 object-contain mb-6">
+      {/if}
+      <h3 class="text-xl font-bold text-slate-900">{sp.companyName}</h3>
+      <p class="text-sm text-slate-500 mt-1">{sp.level} Sponsor</p>
+    </a>
+  {/for}
+</div>

@@ -1,0 +1,31 @@
+---
+title: Speakers
+layout: main
+---
+{@io.quarkiverse.roq.frontmatter.runtime.model.Site site}
+
+<h1 class="text-3xl font-bold text-slate-900 mb-8">Our Speakers</h1>
+
+<div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+  {#for sp in cdi:speakersList.list}
+    <a href="{site.url(sp.url)}" class="border border-slate-200 rounded-lg p-6 flex flex-col items-center text-center hover:shadow-md transition bg-white">
+      {#if sp.photo}
+        <img src="{#if sp.photo.startsWith('/')}{site.url(sp.photo)}{#else}{sp.photo}{/if}"
+             alt="{sp.name}" class="w-20 h-20 rounded-full object-cover mb-3">
+      {#else}
+        <div class="w-20 h-20 rounded-full bg-slate-200 flex items-center justify-center text-slate-500 font-semibold mb-3">
+          {sp.name.charAt(0)}
+        </div>
+      {/if}
+      <h3 class="font-semibold text-slate-900">{sp.name}</h3>
+      <span class="inline-block mt-2 mb-2 text-xs font-medium text-white bg-blue-600 rounded px-2 py-0.5">
+        {sp.talkCount} presentation{#if sp.talkCount != 1}s{/if}
+      </span>
+      {#if sp.jobTitle || sp.company}
+        <p class="text-sm text-slate-500">
+          {#if sp.jobTitle}{sp.jobTitle}{/if}{#if sp.jobTitle && sp.company} at {/if}{#if sp.company}{sp.company}{/if}
+        </p>
+      {/if}
+    </a>
+  {/for}
+</div>

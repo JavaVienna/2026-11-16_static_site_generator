@@ -1,0 +1,52 @@
+---
+title: Companies
+layout: main
+---
+{@io.quarkiverse.roq.frontmatter.runtime.model.Site site}
+
+<h1 class="text-4xl font-bold text-slate-900 mb-4">Companies</h1>
+<p class="text-slate-600 max-w-2xl mb-10">
+  Our speakers come from a variety of companies, from startups to established enterprises,
+  all contributing to the vibrant Java community in Vienna.
+</p>
+
+<div class="grid gap-6 sm:grid-cols-2">
+  {#for co in cdi:companies.list}
+    {#if !co.speakers.isEmpty || co.isCurrentSponsor}
+      <a href="{site.url('/companies/')}{co.slug}/" class="block border border-slate-200 rounded-lg p-6 bg-white hover:shadow-md transition">
+        <div class="flex justify-end">
+          {#if co.isCurrentSponsor}
+            <span class="text-xs font-medium text-green-700 bg-green-100 rounded px-2 py-0.5 whitespace-nowrap">Active Sponsor</span>
+          {#else if co.wasSponsor}
+            <span class="text-xs font-medium text-slate-600 bg-slate-100 rounded px-2 py-0.5 whitespace-nowrap">Past Sponsor</span>
+          {/if}
+        </div>
+        <div class="h-24 flex items-center justify-center mb-3">
+          {#if co.logo}
+            <img src="{#if co.hasLocalLogo}{site.url(co.logo)}{#else}{co.logo}{/if}"
+                 alt="{co.name}" class="max-h-24 max-w-[220px] object-contain">
+          {#else}
+            <span class="text-5xl text-slate-300">&#127970;</span>
+          {/if}
+        </div>
+        <h3 class="text-lg font-bold text-slate-900 text-center">{co.name}</h3>
+        {#if co.totalTalks > 0}
+          <p class="text-sm text-slate-500 text-center mt-1">{co.totalTalks} Total Talk{#if co.totalTalks != 1}s{/if}</p>
+        {/if}
+        {#if !co.speakers.isEmpty}
+          <h4 class="text-sm font-semibold text-slate-700 mt-4 mb-2 border-t border-slate-100 pt-3">Speakers</h4>
+          <ul class="space-y-1 text-sm text-slate-600">
+            {#for s in co.speakers}
+              <li class="flex items-center gap-2">
+                <span class="text-slate-400">&#128100;</span>
+                <span>{s.name}{#if s.jobTitle} &ndash; {s.jobTitle}{/if}
+                  {#if s.talkCount > 0}<span class="text-slate-400">({s.talkCount} talk{#if s.talkCount != 1}s{/if})</span>{/if}
+                </span>
+              </li>
+            {/for}
+          </ul>
+        {/if}
+      </a>
+    {/if}
+  {/for}
+</div>
