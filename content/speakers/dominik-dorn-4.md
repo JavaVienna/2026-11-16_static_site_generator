@@ -6,13 +6,29 @@ slug: dominik-dorn-4
 photo: /img/3a2da3d3-257a-4f78-b5da-156bd4b7acc4.jpg
 company: greyflower GmbH
 jobTitle: Senior Software Engineer
-talkCount: 14
+talkCount: 19
 linkedinUrl: https://www.linkedin.com/in/dominik-dorn/
 twitter: domdorn
 github: domdorn
 website: ""
 hasBio: false
 talks:
+- title: Java Static Site Generation
+  eventTitle: '"Dev Career in the AI Era" + "Java Static Site Generation"'
+  eventSlug: dev-career-in-the-ai-era-java-static-site-generation-96
+  dateDisplay: "Nov 16, 2026 at 18:00"
+  durationMinutes: 60
+- title: Functional Java or "living without nulls"
+  eventTitle: '"Event-Driven Workflow Orchestration" + "Functional Java"'
+  eventSlug: event-driven-workflow-orchestration-functional-java-95
+  dateDisplay: "Oct 19, 2026 at 18:00"
+  durationMinutes: 60
+- title: "Armeria: The Microservices Framework You Haven't Tried Yet"
+  eventTitle: "\"From Reactive Streams -> Virtual Threads -> Flows\", \"Armeria μ\
+    service Fmwk\""
+  eventSlug: from-reactive-streams-virtual-threads-flows-armeria-service-91
+  dateDisplay: "Jun 1, 2026 at 18:00"
+  durationMinutes: 60
 - title: Vaadin 24 in the real world - building the Java Vienna Raffle!
   eventTitle: '"Vaadin 24 in the real world" + "Engineering a better Java build tool"'
   eventSlug: vaadin-24-in-the-real-world-engineering-a-better-java-build-12
@@ -61,6 +77,16 @@ talks:
   eventSlug: june-meetup-camunda-bpm-getting-started-with-akka-68
   dateDisplay: "Jun 12, 2017 at 18:15"
   durationMinutes: 45
+- title: Microservices with the PlayFramework
+  eventTitle: Microservices with the PlayFramework + "Tools of the Trade"
+  eventSlug: microservices-with-the-playframework-tools-of-the-trade-13
+  dateDisplay: "Dec 5, 2016 at 18:15"
+  durationMinutes: 45
+- title: Tools of the Trade
+  eventTitle: Microservices with the PlayFramework + "Tools of the Trade"
+  eventSlug: microservices-with-the-playframework-tools-of-the-trade-13
+  dateDisplay: "Dec 5, 2016 at 18:15"
+  durationMinutes: 45
 - title: What's new in Play Framework 2.5
   eventTitle: What's new in Play Framework 2.5 + Lagom - the microservice framework
   eventSlug: what-s-new-in-play-framework-2-5-lagom-the-microservice-fram-1
@@ -71,16 +97,16 @@ talks:
   eventSlug: what-s-new-in-play-framework-2-5-lagom-the-microservice-fram-1
   dateDisplay: "Apr 18, 2016 at 18:15"
   durationMinutes: 45
-- title: Playframework 2.4 RC2
-  eventTitle: "Mai Meetup: PlayFramework 2.4, Akka-Persistence, ?? (JSUG #70)"
-  eventSlug: mai-meetup-playframework-2-4-akka-persistence-jsug-70-66
-  dateDisplay: "May 11, 2015 at 18:15"
-  durationMinutes: 45
 - title: Akka Persistence
   eventTitle: "Mai Meetup: PlayFramework 2.4, Akka-Persistence, ?? (JSUG #70)"
   eventSlug: mai-meetup-playframework-2-4-akka-persistence-jsug-70-66
   dateDisplay: "May 11, 2015 at 18:15"
   durationMinutes: 60
+- title: Playframework 2.4 RC2
+  eventTitle: "Mai Meetup: PlayFramework 2.4, Akka-Persistence, ?? (JSUG #70)"
+  eventSlug: mai-meetup-playframework-2-4-akka-persistence-jsug-70-66
+  dateDisplay: "May 11, 2015 at 18:15"
+  durationMinutes: 45
 - title: Event Sourcing & CQRS
   eventTitle: "April Meetup: Event Sourcing & CQRS (JSUG #69)"
   eventSlug: april-meetup-event-sourcing-cqrs-jsug-69-69

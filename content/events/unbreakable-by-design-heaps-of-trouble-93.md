@@ -9,7 +9,39 @@ venueType: null
 meetupUrl: https://www.meetup.com/java-vienna/events/315009419
 isUpcoming: false
 hasDescription: true
-talks: []
+talks:
+- title: "Unbreakable by Design: The Secret Tech of Antifragile Software"
+  description: |-
+    How to turn pressure into performance? Anti-fragility of a software characterizes the benefit derived from the variability in faults and errors that have effected the system. Dependable software systems can learn from incidents & poor practices, how to avoid and to deal with them, to increase availability and performance. Despite their growing complexity and increasing size, modern software applications must satisfy strict quality requirements that impose short defect fixing and release cycles. To reduce the developers teams workload, and pressure to produce high-quality software on time, many software engineering tools and concepts are subject to continuous extensive development and improvement.
+
+    In this talk, we will take a closer look at the technical aspects of anti-fragile software systems and how teams deal with errors and reliability. Through the technical analysis of anti-fragility and resilience we will discuss the advantages and drawbacks of systems and techniques, and not at least the relation between anti-fragility in the development process and the anti-fragility of the resulting software product. The audience can expect the topics such as design & operating principles, fault tolerance, fault handling, e.g. automatic software repair, fault injections, and TDD. The overview of methods and principles should encourage developers to adopt anti-fragility and resilience principles into their software architectures.
+  durationMinutes: 60
+  talkLanguage: en
+  slidesLanguage: en
+  speakers:
+  - name: Iryna Dohndorf
+    slug: iryna-dohndorf-104
+  resources: []
+- title: Heaps of Trouble -- Debugging Java OOM
+  description: |-
+    This presentation dives into the practical art of diagnosing Java OutOfMemory errors.
+    We begin with a concise overview of how the Java heap is structured and managed,
+    then move to the command line with jmap—demonstrating how to force heap dumps on demand
+    and extract live histograms to spot memory hogs at a glance.
+    Next, we switch to VisualVM for a hands-on look at opening, inspecting, and—crucially—comparing
+    heap dumps to pinpoint leaks and growth patterns between states.
+    The session culminates with advanced techniques: writing JavaScript snippets inside VisualVM
+    to traverse the heap graph, filter objects, and automate custom analyses that go beyond the
+    built-in tooling.
+    Whether triaging a production incident or hardening an application, attendees will leave with
+    actionable tactics to turn “heaps of trouble” into clear, debuggable insights.
+  durationMinutes: 60
+  talkLanguage: en
+  slidesLanguage: en
+  speakers:
+  - name: Robert C. Kahlert
+    slug: robert-c-kahlert-105
+  resources: []
 sponsors:
 - companyName: dynatrace
   logo: https://secure.meetupstatic.com/photos/sponsor/a/5/0/6/iab120x90_2742246.jpeg

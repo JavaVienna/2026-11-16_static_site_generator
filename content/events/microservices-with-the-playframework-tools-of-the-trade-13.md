@@ -11,22 +11,25 @@ isUpcoming: false
 hasDescription: true
 talks:
 - title: Microservices with the PlayFramework
-  description: null
+  description: |
+    Dominik Dorn will show us how to create Microservices with the PlayFramework. How to setup a minimal app, how to create restful endpoints, Swagger Integration and publishing using Docker.
   durationMinutes: 45
   talkLanguage: en
   slidesLanguage: en
   speakers:
-  - name: Unknown Speaker
-    slug: unknown-speaker-88
+  - name: Dominik Dorn
+    slug: dominik-dorn-4
   resources: []
 - title: Tools of the Trade
-  description: null
+  description: "Dominik will share with us some of his experience. Which tools he\
+    \ prefers to work with, which libraries are hot right now, what you should checkout,\
+    \ stuff to follow, concepts to grasp."
   durationMinutes: 45
   talkLanguage: en
   slidesLanguage: en
   speakers:
-  - name: Unknown Speaker
-    slug: unknown-speaker-88
+  - name: Dominik Dorn
+    slug: dominik-dorn-4
   resources: []
 sponsors:
 - companyName: TU Wien

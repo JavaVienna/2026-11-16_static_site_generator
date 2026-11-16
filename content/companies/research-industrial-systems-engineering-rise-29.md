@@ -44,7 +44,7 @@ pastSpeakers:
   hasBio: false
   linkedinUrl: https://www.linkedin.com/in/dominik-dorn/
   githubUrl: https://github.com/domdorn
-  talkCount: 14
+  talkCount: 19
 ---
 
 

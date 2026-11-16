@@ -9,7 +9,38 @@ venueType: physical
 meetupUrl: https://www.meetup.com/java-vienna/events/314276964
 isUpcoming: false
 hasDescription: true
-talks: []
+talks:
+- title: Centralising and automating your API contracts using a schema registry
+  description: "No matter if REST or message-based, your APIs need to change. Describing\
+    \ the API using OpenAPI or some other specification language is good. But how\
+    \ to make sure all affected parties have the same version of the API spec and\
+    \ that spec changes don't happen before all API users are ready? Let's discover\
+    \ how schema registries can bring order and automation in this. We'll take a look\
+    \ at how you can use them with Java and why the choice of the schema specification\
+    \ language matters."
+  durationMinutes: 60
+  talkLanguage: en
+  slidesLanguage: en
+  speakers:
+  - name: Marián Varga
+    slug: marian-varga-107
+  resources: []
+- title: "OpenJDK, the JCP and JUGs: contributing to Java to become a beyond senior\
+    \ expert"
+  description: |-
+    The Java technology evolves through 3 main pillars: open source, standards and community participation.
+    This interactive presentation will show what happens behind the scenes in those processes, how you can participate, and practical ways you can use Java's evolution to build technical expertise, and advance your career beyond the senior level.
+    In this session you will:
+    \- Understand the secret Java Champions use to build technical expertise
+    \- How to think like Java's main architect\, and build impact in your project and beyond
+    \- How to use Java's pillars to build a growth spiral for your own career
+  durationMinutes: 60
+  talkLanguage: en
+  slidesLanguage: en
+  speakers:
+  - name: Bruno Souza
+    slug: bruno-souza-99
+  resources: []
 sponsors:
 - companyName: dynatrace
   logo: https://secure.meetupstatic.com/photos/sponsor/a/5/0/6/iab120x90_2742246.jpeg

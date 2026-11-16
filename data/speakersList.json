@@ -5,7 +5,7 @@
   "photo" : "/img/3a2da3d3-257a-4f78-b5da-156bd4b7acc4.jpg",
   "company" : "greyflower GmbH",
   "jobTitle" : "Senior Software Engineer",
-  "talkCount" : 14
+  "talkCount" : 19
 }, {
   "name" : "Siegfried Göschl",
   "slug" : "siegfried-goschl-17",
@@ -47,6 +47,14 @@
   "jobTitle" : "Principal Architect for Java",
   "talkCount" : 5
 }, {
+  "name" : "Adam Bien",
+  "slug" : "adam-bien-19",
+  "url" : "/speakers/adam-bien-19/",
+  "photo" : "https://github.com/AdamBien.png",
+  "company" : null,
+  "jobTitle" : null,
+  "talkCount" : 4
+}, {
   "name" : "Sebastian Daschner",
   "slug" : "sebastian-daschner-37",
   "url" : "/speakers/sebastian-daschner-37/",
@@ -54,22 +62,6 @@
   "company" : "Fairsource",
   "jobTitle" : "Chief Technology Officer",
   "talkCount" : 4
-}, {
-  "name" : "Unknown Speaker",
-  "slug" : "unknown-speaker-88",
-  "url" : "/speakers/unknown-speaker-88/",
-  "photo" : null,
-  "company" : null,
-  "jobTitle" : null,
-  "talkCount" : 4
-}, {
-  "name" : "Adam Bien",
-  "slug" : "adam-bien-19",
-  "url" : "/speakers/adam-bien-19/",
-  "photo" : "https://github.com/AdamBien.png",
-  "company" : null,
-  "jobTitle" : null,
-  "talkCount" : 3
 }, {
   "name" : "Ionut Balosin",
   "slug" : "ionut-balosin-28",
@@ -103,6 +95,14 @@
   "jobTitle" : "Software Engineer & Architect",
   "talkCount" : 2
 }, {
+  "name" : "Bruno Souza",
+  "slug" : "bruno-souza-99",
+  "url" : "/speakers/bruno-souza-99/",
+  "photo" : "/img/49816c43-bfa3-4229-8d9f-e501ff41a81c.jpg",
+  "company" : null,
+  "jobTitle" : null,
+  "talkCount" : 2
+}, {
   "name" : "Daniel Pfeiffer",
   "slug" : "daniel-pfeiffer-79",
   "url" : "/speakers/daniel-pfeiffer-79/",
@@ -117,6 +117,14 @@
   "photo" : "/img/27a9b5f2-40ef-4864-8c84-15a46c584f1e.jpg",
   "company" : "adesso Austria GmbH",
   "jobTitle" : "Senior Java Softwareingenieur",
+  "talkCount" : 2
+}, {
+  "name" : "Marco Sussitz",
+  "slug" : "marco-sussitz-31",
+  "url" : "/speakers/marco-sussitz-31/",
+  "photo" : "https://github.com/ReneThu.png",
+  "company" : "dynatrace",
+  "jobTitle" : "Software Developer",
   "talkCount" : 2
 }, {
   "name" : "Mark Struberg",
@@ -135,6 +143,22 @@
   "jobTitle" : "Senior Software Engineer",
   "talkCount" : 2
 }, {
+  "name" : "Sebastian Kühnau",
+  "slug" : "sebastian-kuhnau-7",
+  "url" : "/speakers/sebastian-kuhnau-7/",
+  "photo" : "https://github.com/SebastianKuehnau.png",
+  "company" : "Vaadin",
+  "jobTitle" : "Senior Developer Advocate",
+  "talkCount" : 2
+}, {
+  "name" : "Unknown Speaker",
+  "slug" : "unknown-speaker-88",
+  "url" : "/speakers/unknown-speaker-88/",
+  "photo" : null,
+  "company" : null,
+  "jobTitle" : null,
+  "talkCount" : 2
+}, {
   "name" : "Vadym Kazulkin",
   "slug" : "vadym-kazulkin-1",
   "url" : "/speakers/vadym-kazulkin-1/",
@@ -149,6 +173,14 @@
   "photo" : "https://github.com/eriadam.png",
   "company" : "bimspot / smino",
   "jobTitle" : "Software Architect",
+  "talkCount" : 1
+}, {
+  "name" : "Adam Warski",
+  "slug" : "adam-warski-106",
+  "url" : "/speakers/adam-warski-106/",
+  "photo" : "/img/6b6e1e24-03d0-4386-9ba8-7d315af9adc6.jpg",
+  "company" : null,
+  "jobTitle" : null,
   "talkCount" : 1
 }, {
   "name" : "Adam Zielinski",
@@ -239,6 +271,14 @@
   "jobTitle" : "Lead Software Engineer",
   "talkCount" : 1
 }, {
+  "name" : "Christos Kotselidis",
+  "slug" : "christos-kotselidis-101",
+  "url" : "/speakers/christos-kotselidis-101/",
+  "photo" : "/img/7876cbf6-eedb-4fa3-815b-dd7447fb9b46.jpg",
+  "company" : null,
+  "jobTitle" : null,
+  "talkCount" : 1
+}, {
   "name" : "Craftwork Team",
   "slug" : "craftwork-team-89",
   "url" : "/speakers/craftwork-team-89/",
@@ -263,12 +303,28 @@
   "jobTitle" : null,
   "talkCount" : 1
 }, {
+  "name" : "Elias Erkinger",
+  "slug" : "elias-erkinger-102",
+  "url" : "/speakers/elias-erkinger-102/",
+  "photo" : "/img/3daddde1-3e8c-4949-9f31-bf03519beb05.jpg",
+  "company" : "ACTIVE SOLUTION GmbH",
+  "jobTitle" : "Software Developer",
+  "talkCount" : 1
+}, {
   "name" : "Georg Pirklbauer",
   "slug" : "georg-pirklbauer-3",
   "url" : "/speakers/georg-pirklbauer-3/",
   "photo" : "https://media.licdn.com/dms/image/v2/C5603AQFVFZZsH4zC5w/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1597943810151?e=1755734400&v=beta&t=y5yxg1XAr0UDePKWMhmsLeMnoTwiN86KFCV2PfmFhh0",
   "company" : "dynatrace",
   "jobTitle" : "Senior Software Engineer",
+  "talkCount" : 1
+}, {
+  "name" : "Georgios Angelopoulos",
+  "slug" : "georgios-angelopoulos-103",
+  "url" : "/speakers/georgios-angelopoulos-103/",
+  "photo" : "/img/e9193bbb-3faf-4b7f-92c3-7ca0d9eb0fa3.jpg",
+  "company" : "Prewave",
+  "jobTitle" : "Lead Developer",
   "talkCount" : 1
 }, {
   "name" : "Gergö Barany",
@@ -343,6 +399,14 @@
   "jobTitle" : null,
   "talkCount" : 1
 }, {
+  "name" : "Iryna Dohndorf",
+  "slug" : "iryna-dohndorf-104",
+  "url" : "/speakers/iryna-dohndorf-104/",
+  "photo" : "/img/14412db5-da8b-4e20-8a57-aed3e8a9b3f3.jpg",
+  "company" : null,
+  "jobTitle" : null,
+  "talkCount" : 1
+}, {
   "name" : "Jakob Durstberger",
   "slug" : "jakob-durstberger-21",
   "url" : "/speakers/jakob-durstberger-21/",
@@ -379,6 +443,14 @@
   "slug" : "javid-asgarov-62",
   "url" : "/speakers/javid-asgarov-62/",
   "photo" : "https://github.com/asgarov1.png",
+  "company" : null,
+  "jobTitle" : null,
+  "talkCount" : 1
+}, {
+  "name" : "Kai Waehner",
+  "slug" : "kai-waehner-100",
+  "url" : "/speakers/kai-waehner-100/",
+  "photo" : "/img/a8395b37-4a58-4769-848d-3f201377c4f4.jpg",
   "company" : null,
   "jobTitle" : null,
   "talkCount" : 1
@@ -447,20 +519,20 @@
   "jobTitle" : "Developer Advocate",
   "talkCount" : 1
 }, {
-  "name" : "Marco Sussitz",
-  "slug" : "marco-sussitz-31",
-  "url" : "/speakers/marco-sussitz-31/",
-  "photo" : "https://github.com/ReneThu.png",
-  "company" : "dynatrace",
-  "jobTitle" : "Software Developer",
-  "talkCount" : 1
-}, {
   "name" : "Marios Trivyzas",
   "slug" : "marios-trivyzas-82",
   "url" : "/speakers/marios-trivyzas-82/",
   "photo" : "https://github.com/matriv.png",
   "company" : "crate.io",
   "jobTitle" : "Senior Software Engineer - CrateDB",
+  "talkCount" : 1
+}, {
+  "name" : "Marián Varga",
+  "slug" : "marian-varga-107",
+  "url" : "/speakers/marian-varga-107/",
+  "photo" : "/img/73e2050a-0639-4ab6-bf9b-bda330e26b16.jpg",
+  "company" : null,
+  "jobTitle" : null,
   "talkCount" : 1
 }, {
   "name" : "Marko Jurišić",
@@ -623,6 +695,14 @@
   "jobTitle" : "Developer Advocate",
   "talkCount" : 1
 }, {
+  "name" : "Robert C. Kahlert",
+  "slug" : "robert-c-kahlert-105",
+  "url" : "/speakers/robert-c-kahlert-105/",
+  "photo" : "/img/8a270974-3280-4476-8b50-7d268691cafb.jpg",
+  "company" : null,
+  "jobTitle" : null,
+  "talkCount" : 1
+}, {
   "name" : "Roland Kuhn",
   "slug" : "roland-kuhn-65",
   "url" : "/speakers/roland-kuhn-65/",
@@ -645,14 +725,6 @@
   "photo" : "https://github.com/rdebusscher.png",
   "company" : "MicroStream/EclipseStore",
   "jobTitle" : "Developer Advocate",
-  "talkCount" : 1
-}, {
-  "name" : "Sebastian Kühnau",
-  "slug" : "sebastian-kuhnau-7",
-  "url" : "/speakers/sebastian-kuhnau-7/",
-  "photo" : "https://github.com/SebastianKuehnau.png",
-  "company" : "Vaadin",
-  "jobTitle" : "Senior Developer Advocate",
   "talkCount" : 1
 }, {
   "name" : "Simon Gartner",

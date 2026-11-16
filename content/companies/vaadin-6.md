@@ -8,7 +8,7 @@ hasLogo: true
 websiteUrl: https://vaadin.com
 isCurrentSponsor: false
 wasSponsor: false
-totalTalks: 2
+totalTalks: 3
 hasDescription: false
 currentSpeakers:
 - speakerId: 75
@@ -35,7 +35,7 @@ currentSpeakers:
   hasBio: true
   linkedinUrl: https://www.linkedin.com/in/sebastian-kuehnau-2b733b13/
   githubUrl: https://github.com/SebastianKuehnau
-  talkCount: 1
+  talkCount: 2
 pastSpeakers: []
 ---
 

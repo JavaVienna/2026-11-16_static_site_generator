@@ -8,7 +8,7 @@ hasLogo: true
 websiteUrl: https://dynatrace.com
 isCurrentSponsor: true
 wasSponsor: false
-totalTalks: 13
+totalTalks: 14
 hasDescription: false
 currentSpeakers:
 - speakerId: 59
@@ -80,7 +80,7 @@ currentSpeakers:
   hasBio: true
   linkedinUrl: https://www.linkedin.com/in/marco-sussitz-639315172/
   githubUrl: https://github.com/ReneThu
-  talkCount: 1
+  talkCount: 2
 - speakerId: 29
   slug: max-noe-29
   url: /speakers/max-noe-29/

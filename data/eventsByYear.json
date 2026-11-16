@@ -1,35 +1,80 @@
 [ {
+  "year" : 2027,
+  "events" : [ {
+    "title" : "April Meetup",
+    "dateDisplay" : "Apr 12, 2027 at 18:00",
+    "url" : "/events/april-meetup-101/",
+    "talkCount" : 0,
+    "hasTalks" : false
+  }, {
+    "title" : "maybe march meetup",
+    "dateDisplay" : "Mar 8, 2027 at 18:00",
+    "url" : "/events/maybe-march-meetup-100/",
+    "talkCount" : 0,
+    "hasTalks" : false
+  }, {
+    "title" : "february meetup with Ed Burns",
+    "dateDisplay" : "Feb 22, 2027 at 18:00",
+    "url" : "/events/february-meetup-with-ed-burns-99/",
+    "talkCount" : 0,
+    "hasTalks" : false
+  }, {
+    "title" : "January Meetup",
+    "dateDisplay" : "Jan 18, 2027 at 18:00",
+    "url" : "/events/january-meetup-98/",
+    "talkCount" : 0,
+    "hasTalks" : false
+  } ]
+}, {
   "year" : 2026,
   "events" : [ {
+    "title" : "\"TornadoVM: GPU Accelerated Java\" +\"Drive your UI with AI\"",
+    "dateDisplay" : "Dec 3, 2026 at 18:00",
+    "url" : "/events/tornadovm-gpu-accelerated-java-drive-your-ui-with-ai-97/",
+    "talkCount" : 2,
+    "hasTalks" : true
+  }, {
+    "title" : "\"Dev Career in the AI Era\" + \"Java Static Site Generation\"",
+    "dateDisplay" : "Nov 16, 2026 at 18:00",
+    "url" : "/events/dev-career-in-the-ai-era-java-static-site-generation-96/",
+    "talkCount" : 2,
+    "hasTalks" : true
+  }, {
+    "title" : "\"Event-Driven Workflow Orchestration\" + \"Functional Java\"",
+    "dateDisplay" : "Oct 19, 2026 at 18:00",
+    "url" : "/events/event-driven-workflow-orchestration-functional-java-95/",
+    "talkCount" : 2,
+    "hasTalks" : true
+  }, {
     "title" : "\"Debugging Class Loading with GDB\" + \"Be a better SW-Eng with AI\"",
     "dateDisplay" : "Sep 21, 2026 at 18:00",
     "url" : "/events/debugging-class-loading-with-gdb-be-a-better-sw-eng-with-ai-92/",
-    "talkCount" : 0,
-    "hasTalks" : false
+    "talkCount" : 2,
+    "hasTalks" : true
   }, {
     "title" : "\"living immutable: painless Java Records\" + \"Zero-Deps Java AI Business Agents\"",
     "dateDisplay" : "Jun 29, 2026 at 18:00",
     "url" : "/events/living-immutable-painless-java-records-zero-deps-java-ai-bus-94/",
-    "talkCount" : 0,
-    "hasTalks" : false
+    "talkCount" : 2,
+    "hasTalks" : true
   }, {
     "title" : "\"Unbreakable by design\" + \"Heaps of Trouble\"",
     "dateDisplay" : "Jun 15, 2026 at 18:00",
     "url" : "/events/unbreakable-by-design-heaps-of-trouble-93/",
-    "talkCount" : 0,
-    "hasTalks" : false
+    "talkCount" : 2,
+    "hasTalks" : true
   }, {
     "title" : "\"From Reactive Streams -> Virtual Threads -> Flows\", \"Armeria μservice Fmwk\"",
     "dateDisplay" : "Jun 1, 2026 at 18:00",
     "url" : "/events/from-reactive-streams-virtual-threads-flows-armeria-service-91/",
-    "talkCount" : 0,
-    "hasTalks" : false
+    "talkCount" : 2,
+    "hasTalks" : true
   }, {
     "title" : "\"OpenJDK, the JCP and JUGs: become a beyond senior expert\" + \"Schema Registries\"",
     "dateDisplay" : "Apr 29, 2026 at 18:00",
     "url" : "/events/openjdk-the-jcp-and-jugs-become-a-beyond-senior-expert-schem-90/",
-    "talkCount" : 0,
-    "hasTalks" : false
+    "talkCount" : 2,
+    "hasTalks" : true
   }, {
     "title" : "Domain-Driven Transformation—Modularizing and Modernizing Legacy Software",
     "dateDisplay" : "Apr 15, 2026 at 18:00",

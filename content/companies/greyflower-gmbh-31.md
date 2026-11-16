@@ -8,7 +8,7 @@ hasLogo: true
 websiteUrl: https://greyflower.at
 isCurrentSponsor: false
 wasSponsor: false
-totalTalks: 14
+totalTalks: 19
 hasDescription: false
 currentSpeakers:
 - speakerId: 4
@@ -21,7 +21,7 @@ currentSpeakers:
   hasBio: false
   linkedinUrl: https://www.linkedin.com/in/dominik-dorn/
   githubUrl: https://github.com/domdorn
-  talkCount: 14
+  talkCount: 19
 pastSpeakers: []
 ---
 

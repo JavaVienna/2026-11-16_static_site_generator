@@ -9,7 +9,33 @@ venueType: null
 meetupUrl: https://www.meetup.com/java-vienna/events/316166116
 isUpcoming: false
 hasDescription: true
-talks: []
+talks:
+- title: Debugging Class Loading with GDB
+  description: |-
+    Have you ever wondered why a particular class was loaded at that exact moment? Getting to the bottom of it can be surprisingly hard.
+    I recently encountered a bug with a particularly nasty ClassCircularityError in which classes were loading unexpectedly, and I needed to figure out what triggered that.
+    In this talk, I’ll walk through the steps I used to track it down. We’ll build a slowdebug JVM, attach GDB, and use breakpoints and inspection to identify the precise cause of the class loading. If you’re curious about how the JVM really works and want to peek under the hood, this talk is for you.
+  durationMinutes: 60
+  talkLanguage: en
+  slidesLanguage: en
+  speakers:
+  - name: Marco Sussitz
+    slug: marco-sussitz-31
+  resources: []
+- title: Becoming a Better SW Engineer in the Age of AI
+  description: |
+    AI coding tools can produce code quickly, but developers still need to understand the problem, communicate intent, and judge the result. This talk explores how solid engineering practices help us work effectively with AI assistants.
+    The first part focuses on thinking before coding: using pen and paper, clarifying requirements, and expressing intent through names, interfaces, and documentation. We’ll also discuss choosing the scope of a change and reviewing it critically.
+    The second part brings these habits into practice through a Spring Boot demo application built with Codex. I’ll walk through a representative change, showing how I described the task, reviewed and corrected the generated code, and verified the result.
+    Finally the demo serves a second purpose: demonstrating a simple Markdown structure for providing AI with guidelines, rules, and feature plans. Attendees will leave with a practical approach to organizing context, guiding implementation, and reviewing code, tests, and documentation together.
+    Effective AI assistance starts with clear intent and engineering judgment - and developers remain responsible for the software they deliver.
+  durationMinutes: 60
+  talkLanguage: en
+  slidesLanguage: en
+  speakers:
+  - name: Elias Erkinger
+    slug: elias-erkinger-102
+  resources: []
 sponsors:
 - companyName: dynatrace
   logo: https://secure.meetupstatic.com/photos/sponsor/a/5/0/6/iab120x90_2742246.jpeg

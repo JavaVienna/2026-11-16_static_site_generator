@@ -6,13 +6,20 @@ slug: adam-bien-19
 photo: https://github.com/AdamBien.png
 company: null
 jobTitle: null
-talkCount: 3
+talkCount: 4
 linkedinUrl: https://www.linkedin.com/in/adam-bien/
 twitter: adambien
 github: AdamBien
 website: https://airhacks.com/
 hasBio: true
 talks:
+- title: "Zero-Dependency Java 25+ Business Agents: Running locally with zsmith and\
+    \ LightMetal"
+  eventTitle: "\"living immutable: painless Java Records\" + \"Zero-Deps Java AI Business\
+    \ Agents\""
+  eventSlug: living-immutable-painless-java-records-zero-deps-java-ai-bus-94
+  dateDisplay: "Jun 29, 2026 at 18:00"
+  durationMinutes: 60
 - title: "Pure, \"No Dependencies\" Java LLM Integration"
   eventTitle: '"Pure Java LLM Integration" + "The Only Reasonable Way To Test your
     (µ)Services"'

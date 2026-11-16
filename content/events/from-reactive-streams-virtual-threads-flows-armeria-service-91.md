@@ -10,7 +10,34 @@ venueType: null
 meetupUrl: https://www.meetup.com/java-vienna/events/314639727
 isUpcoming: false
 hasDescription: true
-talks: []
+talks:
+- title: "From Reactive Streams, through Virtual Threads, to Flows"
+  description: |-
+    Since Java's inception, the programming model has shifted from synchronous to asynchronous, and for good reasons: improved performance, higher throughput, and lower latency. Reactive Streams greatly simplified the development of reactive systems by incorporating elements of functional programming.
+
+    However, with the introduction of Virtual Threads in Java 21, Java shifts back towards a purely synchronous model, while retaining high performance.
+
+    Does this render initiatives like Reactive Streams obsolete? Can we combine the benefits of Reactive Streams with the approachability of Virtual Threads, the elasticity of modern Java, and the guarantees of functional programming? And what are the tradeoffs?
+  durationMinutes: 60
+  talkLanguage: en
+  slidesLanguage: en
+  speakers:
+  - name: Adam Warski
+    slug: adam-warski-106
+  resources: []
+- title: "Armeria: The Microservices Framework You Haven't Tried Yet"
+  description: |-
+    "One port to rule them all" .. that's the promise of Armeria,
+    the microservice framework created by the creator of Netty, Trustin Lee.
+    Armeria has built-in support for gRPC and Thrift, automatic endpoint descriptions (OpenAPI) and works with your Spring Boot App, your legacy Tomcat project or your dropwizzard app.
+    We'll take a look at these (and more) features in this talk.
+  durationMinutes: 60
+  talkLanguage: en
+  slidesLanguage: en
+  speakers:
+  - name: Dominik Dorn
+    slug: dominik-dorn-4
+  resources: []
 sponsors:
 - companyName: dynatrace
   logo: https://secure.meetupstatic.com/photos/sponsor/a/5/0/6/iab120x90_2742246.jpeg

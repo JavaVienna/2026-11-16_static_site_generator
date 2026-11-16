@@ -6,13 +6,18 @@ slug: sebastian-kuhnau-7
 photo: https://github.com/SebastianKuehnau.png
 company: Vaadin
 jobTitle: Senior Developer Advocate
-talkCount: 1
+talkCount: 2
 linkedinUrl: https://www.linkedin.com/in/sebastian-kuehnau-2b733b13/
 twitter: ""
 github: SebastianKuehnau
 website: ""
 hasBio: true
 talks:
+- title: From Java to AI-Assisted Web UIs with Vaadin
+  eventTitle: "\"TornadoVM: GPU Accelerated Java\" +\"Drive your UI with AI\""
+  eventSlug: tornadovm-gpu-accelerated-java-drive-your-ui-with-ai-97
+  dateDisplay: "Dec 3, 2026 at 18:00"
+  durationMinutes: 60
 - title: Vaadin 24 in the real world - building the Java Vienna Raffle!
   eventTitle: '"Vaadin 24 in the real world" + "Engineering a better Java build tool"'
   eventSlug: vaadin-24-in-the-real-world-engineering-a-better-java-build-12

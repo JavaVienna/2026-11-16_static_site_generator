@@ -6,13 +6,18 @@ slug: marco-sussitz-31
 photo: https://github.com/ReneThu.png
 company: dynatrace
 jobTitle: Software Developer
-talkCount: 1
+talkCount: 2
 linkedinUrl: https://www.linkedin.com/in/marco-sussitz-639315172/
 twitter: ""
 github: ReneThu
 website: ""
 hasBio: true
 talks:
+- title: Debugging Class Loading with GDB
+  eventTitle: '"Debugging Class Loading with GDB" + "Be a better SW-Eng with AI"'
+  eventSlug: debugging-class-loading-with-gdb-be-a-better-sw-eng-with-ai-92
+  dateDisplay: "Sep 21, 2026 at 18:00"
+  durationMinutes: 60
 - title: Debugging a debugger
   eventTitle: '"Debugging a debugger" & "REST vs. gRPC vs GraphQL"'
   eventSlug: debugging-a-debugger-rest-vs-grpc-vs-graphql-56

@@ -1,22 +1,28 @@
 {
   "recentPast" : [ {
+    "title" : "\"Event-Driven Workflow Orchestration\" + \"Functional Java\"",
+    "dateDisplay" : "Oct 19, 2026 at 18:00",
+    "url" : "/events/event-driven-workflow-orchestration-functional-java-95/",
+    "talkCount" : 2,
+    "hasTalks" : true
+  }, {
     "title" : "\"Debugging Class Loading with GDB\" + \"Be a better SW-Eng with AI\"",
     "dateDisplay" : "Sep 21, 2026 at 18:00",
     "url" : "/events/debugging-class-loading-with-gdb-be-a-better-sw-eng-with-ai-92/",
-    "talkCount" : 0,
-    "hasTalks" : false
+    "talkCount" : 2,
+    "hasTalks" : true
   }, {
     "title" : "\"living immutable: painless Java Records\" + \"Zero-Deps Java AI Business Agents\"",
     "dateDisplay" : "Jun 29, 2026 at 18:00",
     "url" : "/events/living-immutable-painless-java-records-zero-deps-java-ai-bus-94/",
-    "talkCount" : 0,
-    "hasTalks" : false
-  }, {
-    "title" : "\"Unbreakable by design\" + \"Heaps of Trouble\"",
-    "dateDisplay" : "Jun 15, 2026 at 18:00",
-    "url" : "/events/unbreakable-by-design-heaps-of-trouble-93/",
-    "talkCount" : 0,
-    "hasTalks" : false
+    "talkCount" : 2,
+    "hasTalks" : true
   } ],
-  "nextUpcoming" : null
+  "nextUpcoming" : {
+    "title" : "\"Dev Career in the AI Era\" + \"Java Static Site Generation\"",
+    "dateDisplay" : "Nov 16, 2026 at 18:00",
+    "url" : "/events/dev-career-in-the-ai-era-java-static-site-generation-96/",
+    "talkCount" : 2,
+    "hasTalks" : true
+  }
 }
