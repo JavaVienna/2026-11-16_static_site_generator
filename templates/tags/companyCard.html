@@ -1,0 +1,37 @@
+{! Company card for the companies list page. Params:
+     co   = a DocumentPage from site.collections.companies (front matter in co.data)
+     site = the Site (passed explicitly; tags don't get it automatically) !}
+<a href="{co.url}" class="block border border-slate-200 rounded-lg p-6 bg-white hover:shadow-md transition">
+  <div class="flex justify-end min-h-[1.5rem]">
+    {#if co.data.isCurrentSponsor}
+      <span class="text-xs font-medium text-green-700 bg-green-100 rounded px-2 py-0.5 whitespace-nowrap">Active Sponsor</span>
+    {#else if co.data.wasSponsor}
+      <span class="text-xs font-medium text-slate-600 bg-slate-100 rounded px-2 py-0.5 whitespace-nowrap">Past Sponsor</span>
+    {/if}
+  </div>
+  <div class="h-24 flex items-center justify-center mb-3">
+    {#if co.data.logo}
+      <img src="{#if co.data.logo.startsWith('/')}{site.url(co.data.logo)}{#else}{co.data.logo}{/if}"
+           alt="{co.data.name}" class="max-h-24 max-w-[220px] object-contain">
+    {#else}
+      <span class="text-5xl text-slate-300">&#127970;</span>
+    {/if}
+  </div>
+  <h3 class="text-lg font-bold text-slate-900 text-center">{co.data.name}</h3>
+  {#if co.data.totalTalks > 0}
+    <p class="text-sm text-slate-500 text-center mt-1">{co.data.totalTalks} Total Talk{#if co.data.totalTalks != 1}s{/if}</p>
+  {/if}
+  {#if !co.data.currentSpeakers.isEmpty}
+    <h4 class="text-sm font-semibold text-slate-700 mt-4 mb-2 border-t border-slate-100 pt-3">Speakers</h4>
+    <ul class="space-y-1 text-sm text-slate-600">
+      {#for s in co.data.currentSpeakers}
+        <li class="flex items-center gap-2">
+          <span class="text-slate-400">&#128100;</span>
+          <span>{s.name}{#if s.jobTitle} &ndash; {s.jobTitle}{/if}
+            {#if s.talkCount > 0}<span class="text-slate-400">({s.talkCount} talk{#if s.talkCount != 1}s{/if})</span>{/if}
+          </span>
+        </li>
+      {/for}
+    </ul>
+  {/if}
+</a>

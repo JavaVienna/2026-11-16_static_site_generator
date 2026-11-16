@@ -37,21 +37,19 @@ java-wien/
 │   ├── eventsByYear.json           # events grouped by year, newest first (events list)
 │   ├── home.json                   # 3 most recent past events + next upcoming (home)
 │   ├── speakersList.json           # slim speaker cards, sorted by talk count (speakers list)
-│   └── sponsors.json  companies.json
+│   └── sponsors.json               # (companies has NO json — list is the markdown collection)
+├── content/companies/<slug>.md     # company detail AND the companies list source (collection)
 ├── templates/
-│   ├── layouts/main.html           # sidebar + content shell
-│   ├── layouts/page.html           # markdown pages (impressum/privacy)
-│   ├── layouts/event.html          # event detail  (front matter + {#insert /} body)
-│   ├── layouts/speaker.html        # speaker detail (front matter + {#insert /} body)
-│   └── tags/navItem.html           # sidebar nav link
-├── public/img/                     # images (synced, committed)
-├── public/css/site.css
-└── src/main/resources/application.properties   # site.url + http.port (no collections)
+│   ├── layouts/{main,page,event,speaker,company}.html
+│   └── tags/{navItem,companySpeakerCard,companyCard}.html
+├── public/img/  public/css/site.css
+└── src/main/resources/application.properties   # site.url + http.port + companies collection
     src/main/java/wien/java/EventsByYear.java     # @DataMapping ARRAY_FILE -> cdi:eventsByYear
     src/main/java/wien/java/Home.java             # @DataMapping OBJECT_FILE -> cdi:home
     src/main/java/wien/java/SpeakersList.java      # @DataMapping ARRAY_FILE -> cdi:speakersList
     src/main/java/wien/java/Sponsors.java          # @DataMapping ARRAY_FILE -> cdi:sponsors
-    src/main/java/wien/java/Companies.java         # @DataMapping ARRAY_FILE -> cdi:companies
+    src/main/java/wien/java/CompanyView.java       # CDI bean: sort + Hall-of-Fame filter for
+                                                  #   the companies list (cdi:companyView)
 ```
 
 > **Detail pages = markdown, list pages = data beans.** Each `content/events/<slug>.md` /
@@ -133,7 +131,11 @@ plus `/img/` and `/css/`.
   (event description / speaker bio) renders via `{#insert /}`.
 - **List/home pages = data beans.** `@DataMapping(type=ARRAY_FILE/OBJECT_FILE)` Java records
   expose `data/*.json` as `cdi:eventsByYear.list`, `cdi:home.*`, `cdi:speakersList.list`,
-  `cdi:sponsors.list`, `cdi:companies.list`. All pre-ordered by the exporter.
+  `cdi:sponsors.list`. All pre-ordered by the exporter.
+- **Companies** is the exception: no JSON. `content/companies/*.md` is a Roq collection; the
+  list page iterates it, with sort + Hall-of-Fame filter done in the `CompanyView` CDI bean
+  (`cdi:companyView.sortedCompanies` / `.hallOfFameCompanies`; the bean `@Inject`s
+  `Instance<Site>` and reads `site.get().collections().get("companies")`). Tabs are CSS-only.
 - `slug` = kebab-case of title/name + `-<id>` (stable, unique), and is the file name.
 
 ## Gotchas discovered

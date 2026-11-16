@@ -1,2 +1,26 @@
 /* Minimal supplemental styles; Tailwind CDN provides the rest. */
 html { scroll-behavior: smooth; }
+
+/* Companies page: CSS-only tabs (Alle / Hall of Fame), no JavaScript.
+   The two radio inputs precede .tabbar and the panels as siblings, so the
+   general-sibling combinator (~) drives the active tab + which panel shows. */
+.company-tabs .tab-label {
+  padding: 0.5rem 1rem;
+  font-weight: 600;
+  color: #64748b;                 /* slate-500 */
+  border-bottom: 2px solid transparent;
+  margin-bottom: -1px;
+  cursor: pointer;
+  user-select: none;
+}
+.company-tabs .tab-label:hover { color: #334155; }  /* slate-700 */
+
+#tab-all:checked ~ .tabbar label[for="tab-all"],
+#tab-hof:checked ~ .tabbar label[for="tab-hof"] {
+  color: #2563eb;                 /* blue-600 */
+  border-bottom-color: #2563eb;
+}
+
+.company-tabs .tab-panel { display: none; }
+#tab-all:checked ~ #panel-all { display: grid; }
+#tab-hof:checked ~ #panel-hof { display: grid; }

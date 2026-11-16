@@ -1,0 +1,9 @@
+target/
+.quarkus/
+node_modules/
+*.iml
+.idea/
+.openidea/
+CLAUDE.md
+# data/ and public/img/ ARE committed on purpose (the generate step reads them,
+# so CI never needs the database).
