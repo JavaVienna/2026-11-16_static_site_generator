@@ -7,15 +7,15 @@ project publishes a static site to java.wien.
 ## The "export bridge" pattern
 
 ```
-raffle Postgres DB  --(../exporter, read-only JDBC)-->  markdown + JSON + images
+raffle Postgres DB  --(./exporter, read-only JDBC)-->  markdown + JSON + images
                                                               |  (rsync into this repo)
                                                               v
                                                    Roq (Qute)  -->  target/roq/ (static HTML)
 ```
 
-- The exporter lives in **`../exporter`** (outside this repo) and is the **only** thing
+- The exporter lives in **`./exporter`** (inside this repo) and is the **only** thing
   that touches the database. It writes one markdown file per event/speaker, a little JSON
-  for the list pages, and the images, into `../exporter/out/`; `../exporter/02_sync.sh`
+  for the list pages, and the images, into `exporter/out/`; `exporter/02_sync.sh`
   rsyncs that in here. The DB is the source of truth; the synced markdown is a reviewable
   artifact (look at `git diff`), not hand-edited.
 - `roq generate` builds the site **from the committed content** — it needs **no** database.
@@ -31,8 +31,8 @@ java-wien/
 │   ├── events.html                 # events list (year-grouped cards)
 │   ├── speakers.html sponsors.html companies.html
 │   ├── impressum.md privacy-policy.md
-│   ├── events/<slug>.md            # ONE markdown file per event  (synced from ../exporter)
-│   └── speakers/<slug>.md          # ONE markdown file per speaker (synced from ../exporter)
+│   ├── events/<slug>.md            # ONE markdown file per event  (synced from ./exporter)
+│   └── speakers/<slug>.md          # ONE markdown file per speaker (synced from ./exporter)
 ├── data/                           # list-page JSON (synced, committed)
 │   ├── eventsByYear.json           # events grouped by year, newest first (events list)
 │   ├── home.json                   # 3 most recent past events + next upcoming (home)
@@ -71,10 +71,10 @@ Numbered scripts wrap the commands below (they pin Java 21 and the right ports v
 | `./05_preview_static.sh` | serve `target/roq/` as plain files on :8097 |
 | `./99_stop.sh` | stop the Roq/preview servers + raffle Postgres |
 
-Refreshing content from the DB lives in **`../exporter`** (not here):
-`(cd ../exporter && ./01_export.sh && ./02_sync.sh)`.
+Refreshing content from the DB lives in **`./exporter`** (a subdirectory):
+`(cd exporter && ./01_export.sh && ./02_sync.sh)`.
 
-Typical demo flow: `01` → `02` (show live) → `../exporter` export+sync → review `git diff`
+Typical demo flow: `01` → `02` (show live) → `exporter` export+sync → review `git diff`
 → `03` → `05`.
 
 ## Commands (what the scripts run)
@@ -86,14 +86,14 @@ so set `JAVA_HOME` for the Maven commands:
 export JAVA_HOME=~/.sdkman/candidates/java/21.0.9-tem
 ```
 
-### 1. Refresh content from the DB (in ../exporter)
+### 1. Refresh content from the DB (in ./exporter)
 
 ```bash
-(cd ../exporter && ./01_export.sh && ./02_sync.sh)
+(cd exporter && ./01_export.sh && ./02_sync.sh)
 ```
 
-This runs the read-only exporter (markdown + JSON + images into `../exporter/out/`) and
-rsyncs it into this repo's `content/`, `data/`, `public/img/`. See `../exporter/README.md`.
+This runs the read-only exporter (markdown + JSON + images into `exporter/out/`) and
+rsyncs it into this repo's `content/`, `data/`, `public/img/`. See `exporter/README.md`.
 Only **`event.status='PUBLISHED'`** events and **`speaker.active=true`** speakers are
 exported. Review the result with `git diff` before regenerating.
 
